@@ -1,0 +1,152 @@
+// PastShow.jsx
+// Bento-style grid showcasing highlights and stats from previous editions of the show.
+
+import React from "react";
+
+const PastShow = () => {
+  const darkCard =
+    "rounded-[30px] border border-gray-800 bg-[#050505]/95 shadow-[0_0_40px_rgba(0,0,0,0.9)]";
+
+  return (
+    <section
+      className="bg-black px-6 py-16 sm:px-8 md:px-10 lg:px-20"
+      aria-labelledby="past-show-heading"
+    >
+      <div className="mx-auto max-w-6xl">
+        {/* Top stat row */}
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {[
+            { label: "GLOBAL SPEAKERS", value: "50+" },
+            { label: "VC CAPITAL", value: "$4.2B" },
+            { label: "WORKSHOPS", value: "24" },
+            { label: "EXPECTED GUESTS", value: "12K" },
+          ].map((item) => (
+            <article
+              key={item.label}
+              className={`${darkCard} flex flex-col justify-between px-5 py-4 sm:px-6 sm:py-5`}
+            >
+              <p className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-gray-500">
+                {item.label}
+              </p>
+              <p className="mt-3 text-xl sm:text-2xl font-semibold text-[#F44A22]">
+                {item.value}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        {/* Section header */}
+        <header className="mt-10 mb-6 flex items-baseline justify-between gap-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+              PAST SHOW HIGHLIGHTS
+            </p>
+            <p className="mt-1 text-xs italic text-gray-500">
+              Experience the energy of previous Entrepreneurship Shows.
+            </p>
+          </div>
+          <p className="hidden text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#F44A22] md:inline">
+            2023 – 2025 RECAP
+          </p>
+        </header>
+
+        {/* Bento grid layout: 2 columns
+            Left column: single card taking full height
+            Right column: stacked cards that share the same total height
+        */}
+        <div className="grid grid-cols-1 gap-4 md:h-[520px] lg:h-[580px] md:grid-cols-2">
+          {/* Large image-style card (left, full height) */}
+          <article className={`${darkCard} h-full overflow-hidden`}>
+            <div className="relative h-full w-full">
+              <div className="h-full w-full bg-gradient-to-t from-[#F44A22]/70 via-[#F44A22]/30 to-black" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(244,74,34,0.5),_transparent_55%)] opacity-80" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
+              <div className="pointer-events-auto absolute bottom-4 left-4 right-4 flex flex-col gap-3 text-left">
+                <span className="inline-flex w-max items-center rounded-full bg-black/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white">
+                  LIVE REPLAY
+                </span>
+                <h3 className="text-base sm:text-lg font-semibold text-white">
+                  Main Stage 2025: The Opening.
+                </h3>
+                <p className="max-w-md text-xs text-gray-300">
+                  Lights down, founders up. A packed room, a wall of sound, and
+                  the first stories that set the tone for the night.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Right column */}
+          <div className="flex h-full flex-col gap-4">
+            {/* Top card */}
+            <article
+              className={`${darkCard} flex flex-1 flex-col justify-between p-5 sm:p-6`}
+            >
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-gray-400">
+                  FOUNDER PITCHES
+                </p>
+                <h3 className="mt-3 text-base font-semibold text-white">
+                  Stories behind the seed rounds.
+                </h3>
+                <p className="mt-3 text-xs text-gray-400">
+                  Watch the pitches that secured over $70M in early funding —
+                  including the moments that almost broke.
+                </p>
+              </div>
+              <p className="mt-4 text-[0.65rem] uppercase tracking-[0.18em] text-gray-500">
+                2024 STAGE REEL
+              </p>
+            </article>
+
+            {/* Bottom row: two cards side by side */}
+            <div className="grid flex-1 grid-cols-2 gap-4">
+              {/* Bright accent card */}
+              <article className="flex h-full flex-col justify-between rounded-[30px] bg-[#F44A22] px-4 py-4 text-black shadow-[0_0_40px_rgba(244,74,34,0.5)]">
+                <div>
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-black/70">
+                    NETWORKING MIXER 2024
+                  </p>
+                  <h3 className="mt-3 text-sm sm:text-base font-semibold">
+                    A room built for long-term collaborators.
+                  </h3>
+                </div>
+                <p className="mt-3 text-[0.7rem] text-black/70">
+                  120 high-intent matches in one evening — founders, operators
+                  and investors paired on what they&apos;re building next.
+                </p>
+              </article>
+
+              {/* Small dark recap card */}
+              <article
+                className={`${darkCard} flex h-full flex-col justify-between px-4 py-4 sm:px-5 sm:py-5`}
+              >
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-gray-400">
+                    INNOVATION LAB
+                  </p>
+                  <h3 className="mt-3 text-sm sm:text-base font-semibold text-white">
+                    Hands-on demos from teams in stealth.
+                  </h3>
+                  <p className="mt-3 text-[0.7rem] text-gray-400">
+                    A quiet corner where founders showed what they&apos;re
+                    shipping next, months before launch.
+                  </p>
+                </div>
+                <p className="mt-3 text-[0.65rem] uppercase tracking-[0.18em] text-gray-500">
+                  PROTOTYPES • PRIVATE FEEDBACK
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PastShow;
+
+
