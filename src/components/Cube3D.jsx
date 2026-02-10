@@ -2,6 +2,8 @@
 // 3D cube used in the hero, adapted to the event color system with a subtle rotation animation.
 
 import React, { useEffect, useRef } from "react";
+import { FaRocket, FaNetworkWired, FaDollarSign } from "react-icons/fa";
+import { HiFire, HiSparkles, HiLightningBolt } from "react-icons/hi";
 
 const faceBase = {
   backfaceVisibility: "hidden",
@@ -54,7 +56,7 @@ const Cube3D = () => {
       >
         {/* Front */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/70 bg-[#F44A22]/5 text-sm font-semibold tracking-wide text-gray-50"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/70 bg-[#F44A22]/5 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-50"
           style={{
             ...faceBase,
             transform: `translateZ(${depth}px)`,
@@ -65,15 +67,13 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            rocket
-          </span>
+          <FaRocket className="mb-2 text-4xl text-[#F44A22]" />
           INNOVATE
         </div>
 
         {/* Back */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/25 bg-black/40 text-sm font-semibold tracking-wide text-gray-300"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/25 bg-black/40 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-300"
           style={{
             ...faceBase,
             transform: `rotateY(180deg) translateZ(${depth}px)`,
@@ -84,15 +84,13 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            hub
-          </span>
+          <FaNetworkWired className="mb-2 text-4xl text-[#F44A22]" />
           NETWORK
         </div>
 
         {/* Right */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/40 bg-[#F44A22]/3 text-sm font-semibold tracking-wide text-gray-50"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/40 bg-[#F44A22]/3 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-50"
           style={{
             ...faceBase,
             transform: `rotateY(90deg) translateZ(${depth}px)`,
@@ -103,15 +101,13 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            record_voice_over
-          </span>
-          PITCH
+          <HiFire className="mb-2 text-4xl text-[#F44A22]" />
+          IGNITE
         </div>
 
         {/* Left */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/40 bg-[#F44A22]/3 text-sm font-semibold tracking-wide text-gray-50"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/40 bg-[#F44A22]/3 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-50"
           style={{
             ...faceBase,
             transform: `rotateY(-90deg) translateZ(${depth}px)`,
@@ -122,15 +118,13 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            trending_up
-          </span>
-          SCALE
+          <HiSparkles className="mb-2 text-4xl text-[#F44A22]" />
+          INSPIRE
         </div>
 
         {/* Top */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/35 bg-[#F44A22]/4 text-sm font-semibold tracking-wide text-gray-50"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/35 bg-[#F44A22]/4 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-50"
           style={{
             ...faceBase,
             transform: `rotateX(90deg) translateZ(${depth}px)`,
@@ -141,15 +135,13 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            monetization_on
-          </span>
+          <FaDollarSign className="mb-2 text-4xl text-[#F44A22]" />
           FUND
         </div>
 
         {/* Bottom */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/25 bg-black/40 text-sm font-semibold tracking-wide text-gray-300"
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-[#F44A22]/25 bg-black/40 text-2xl font-extrabold uppercase tracking-[0.18em] text-gray-300"
           style={{
             ...faceBase,
             transform: `rotateX(-90deg) translateZ(${depth}px)`,
@@ -160,9 +152,7 @@ const Cube3D = () => {
             `,
           }}
         >
-          <span className="material-symbols-outlined mb-2 text-4xl text-[#F44A22]">
-            bolt
-          </span>
+          <HiLightningBolt className="mb-2 text-4xl text-[#F44A22]" />
           DISRUPT
         </div>
       </div>
