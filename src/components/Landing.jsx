@@ -111,7 +111,7 @@ const Landing = () => {
                 />
               </svg>
             </span>
-            WORLD&apos;S ELITE STARTUP SUMMIT 2026
+            INSPIRE • EMPOWER • CONNECT WITH FUTURE ENTREPRENEURS
           </p>
 
           {/* Main headline */}
