@@ -28,7 +28,7 @@ const PastShow = () => {
               <p className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-gray-500">
                 {item.label}
               </p>
-              <p className="mt-3 text-xl sm:text-2xl font-semibold text-[#F44A22]">
+              <p className="mt-3 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#F44A22]">
                 {item.value}
               </p>
             </article>
@@ -38,14 +38,19 @@ const PastShow = () => {
         {/* Section header */}
         <header className="mt-10 mb-6 flex items-baseline justify-between gap-4">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+            <p className="text-sm sm:text-base font-extrabold uppercase tracking-[0.24em] text-gray-300">
               PAST SHOW HIGHLIGHTS
             </p>
-            <p className="mt-1 text-xs italic text-gray-500">
+            <p className="mt-2 text-base sm:text-lg text-gray-400">
               Experience the energy of previous Entrepreneurship Shows.
             </p>
           </div>
-          <p className="hidden text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#F44A22] md:inline">
+          <p
+            className="hidden md:inline-flex items-center rounded-full border border-[#F44A22]/60 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#F44A22]"
+            style={{
+              boxShadow: "0 0 0 1px rgba(244,74,34,0.3), 0 0 20px rgba(244,74,34,0.4)"
+            }}
+          >
             2023 – 2025 RECAP
           </p>
         </header>
@@ -58,19 +63,23 @@ const PastShow = () => {
           {/* Large image-style card (left, full height) */}
           <article className={`${darkCard} h-full overflow-hidden`}>
             <div className="relative h-full w-full">
-              <div className="h-full w-full bg-linear-to-t from-[#F44A22]/70 via-[#F44A22]/30 to-black" />
+              <img
+                src="/audi.jpeg"
+                alt="Main Stage Event"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(244,74,34,0.5),transparent_55%)] opacity-80" />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black via-black/60 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(244,74,34,0.3),transparent_55%)] opacity-60" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black via-black/80 to-transparent" />
 
               <div className="pointer-events-auto absolute bottom-4 left-4 right-4 flex flex-col gap-3 text-left">
                 <span className="inline-flex w-max items-center rounded-full bg-black/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white">
                   LIVE REPLAY
                 </span>
-                <h3 className="text-base sm:text-lg font-semibold text-white">
+                <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   Main Stage 2025: The Opening.
                 </h3>
-                <p className="max-w-md text-xs text-gray-300">
+                <p className="max-w-md text-sm text-gray-300">
                   Lights down, founders up. A packed room, a wall of sound, and
                   the first stories that set the tone for the night.
                 </p>
@@ -82,38 +91,56 @@ const PastShow = () => {
           <div className="flex h-full flex-col gap-4">
             {/* Top card */}
             <article
-              className={`${darkCard} flex flex-1 flex-col justify-between p-5 sm:p-6`}
+              className="relative flex flex-1 flex-col justify-between p-5 sm:p-6 overflow-hidden rounded-2xl border-2 border-gray-600/40 bg-black/20 shadow-[0_0_30px_rgba(0,0,0,0.9)]"
+              style={{ backdropFilter: "blur(10px)" }}
             >
-              <div>
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-gray-400">
+              <img
+                src="/vij.jpeg"
+                alt="Founder Pitches"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30" />
+              <div className="relative z-10">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-gray-400">
                   FOUNDER PITCHES
                 </p>
-                <h3 className="mt-3 text-base font-semibold text-white">
+                <h3 className="mt-3 text-lg sm:text-xl font-extrabold text-white">
                   Stories behind the seed rounds.
                 </h3>
-                <p className="mt-3 text-xs text-gray-400">
+                <p className="mt-3 text-sm text-gray-400">
                   Watch the pitches that secured over $70M in early funding —
                   including the moments that almost broke.
                 </p>
               </div>
-              <p className="mt-4 text-[0.65rem] uppercase tracking-[0.18em] text-gray-500">
+              <p
+                className="mt-4 inline-flex w-max items-center rounded-full border border-[#F44A22]/60 bg-black/70 px-3 py-1.5 text-[0.65rem] uppercase tracking-[0.18em] text-[#F44A22] relative z-10"
+                style={{
+                  boxShadow: "0 0 0 1px rgba(244,74,34,0.3), 0 0 20px rgba(244,74,34,0.4)"
+                }}
+              >
                 2024 STAGE REEL
               </p>
             </article>
 
             {/* Bottom row: two cards side by side */}
             <div className="grid flex-1 grid-cols-2 gap-4">
-              {/* Bright accent card */}
-              <article className="flex h-full flex-col justify-between rounded-2xl bg-[#F44A22] px-4 py-4 text-black shadow-[0_0_40px_rgba(244,74,34,0.5)]">
-                <div>
+              {/* Bright accent card with image */}
+              <article className="relative flex h-full flex-col justify-between rounded-2xl bg-[#F44A22] px-4 py-4 text-black shadow-[0_0_40px_rgba(244,74,34,0.5)] overflow-hidden">
+                <img
+                  src="/saumya_singh_tes.jpeg"
+                  alt="Networking Mixer"
+                  className="absolute inset-0 h-full w-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#F44A22] via-[#F44A22]/95 to-[#F44A22]/90" />
+                <div className="relative z-10">
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-black/70">
                     NETWORKING MIXER 2024
                   </p>
-                  <h3 className="mt-3 text-sm sm:text-base font-semibold">
+                  <h3 className="mt-3 text-base sm:text-lg font-extrabold">
                     A room built for long-term collaborators.
                   </h3>
                 </div>
-                <p className="mt-3 text-[0.7rem] text-black/70">
+                <p className="mt-3 text-sm text-black/70 relative z-10">
                   120 high-intent matches in one evening — founders, operators
                   and investors paired on what they&apos;re building next.
                 </p>
@@ -124,13 +151,13 @@ const PastShow = () => {
                 className={`${darkCard} flex h-full flex-col justify-between px-4 py-4 sm:px-5 sm:py-5`}
               >
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-gray-400">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-gray-400">
                     INNOVATION LAB
                   </p>
-                  <h3 className="mt-3 text-sm sm:text-base font-semibold text-white">
+                  <h3 className="mt-3 text-base sm:text-lg font-extrabold text-white">
                     Hands-on demos from teams in stealth.
                   </h3>
-                  <p className="mt-3 text-[0.7rem] text-gray-400">
+                  <p className="mt-3 text-sm text-gray-400">
                     A quiet corner where founders showed what they&apos;re
                     shipping next, months before launch.
                   </p>

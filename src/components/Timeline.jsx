@@ -48,16 +48,21 @@ const Timeline = () => {
         <div className="flex-1">
           {/* Section heading */}
           <header className="mb-8">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+            <p
+              className="inline-flex w-max items-center rounded-full border border-[#F44A22]/60 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#F44A22]"
+              style={{
+                boxShadow: "0 0 0 1px rgba(244,74,34,0.3), 0 0 20px rgba(244,74,34,0.4)"
+              }}
+            >
               FEB 21, 2026 SCHEDULE
             </p>
             <h2
               id="timeline-heading"
-              className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-white"
+              className="mt-2 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white"
             >
               A show scripted for momentum.
             </h2>
-            <p className="mt-3 max-w-2xl text-sm text-gray-400">
+            <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-400">
               Every block of the evening builds on the last — so by the time you
               leave, you&apos;ve heard the stories, met the people, and seen the
               deals that define what&apos;s next.
@@ -94,13 +99,13 @@ const Timeline = () => {
                     {/* Content card */}
                     <div className="flex-1 pb-1">
                       <div className="rounded-2xl bg-[#131313] px-4 py-4 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-                        <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-[#F44A22]">
+                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#F44A22]">
                           {item.time}
                         </p>
-                        <h3 className="mt-2 text-sm sm:text-base font-semibold text-white">
+                        <h3 className="mt-2 text-lg sm:text-xl font-semibold text-white">
                           {item.title}
                         </h3>
-                        <p className="mt-2 text-xs sm:text-sm text-gray-300">
+                        <p className="mt-2 text-sm sm:text-base text-gray-300">
                           {item.description}
                         </p>
                       </div>
@@ -116,10 +121,10 @@ const Timeline = () => {
         <aside className="w-full max-w-sm self-start space-y-4 lg:space-y-5">
           {/* QR card */}
           <div className="rounded-2xl bg-[#F44A22] p-5 text-black shadow-[0_0_40px_rgba(244,74,34,0.6)]">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-black/70">
+            <p className="text-base font-extrabold uppercase tracking-[0.20em] text-black">
               REGISTER QUICKLY
             </p>
-            <p className="mt-3 text-xs text-black/80">
+            <p className="mt-3 text-sm text-black/80">
               Scan the QR code to confirm your seat and get event updates on
               your phone.
             </p>
@@ -133,7 +138,7 @@ const Timeline = () => {
             </div>
 
             <a
-              className="mt-4 block w-full rounded-full cursor-pointer bg-black px-4 py-2.5 text-center text-xs font-semibold uppercase tracking-[0.18em] text-white"
+              className="mt-4 block w-full rounded-full cursor-pointer bg-black px-6 py-3.5 text-center text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-gray-900"
               href="https://forms.office.com/Pages/ResponsePage.aspx?id=Dn_YOpMfvUGU9ILDfZcciI684JB80VRGkdlg2YpjF7dUNkdGVTBRSU1ETUc3VFRKVlMzOTBBNVg1TC4u&origin=QRCode"
               target="_blank"
               rel="noopener noreferrer"
@@ -144,17 +149,28 @@ const Timeline = () => {
 
           {/* Location card */}
           <div className="rounded-2xl border border-gray-800 bg-[#050505] p-5 text-left shadow-[0_0_30px_rgba(0,0,0,0.9)]">
-            <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-gray-400">
+            <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-gray-300">
               VENUE LOCATION
             </p>
-            <div className="mt-4 flex h-20 w-full items-center justify-center rounded-2xl bg-linear-to-br from-black via-[#111] to-[#1f1f1f] text-gray-500">
-              <span className="text-xs uppercase tracking-[0.18em]">
-                SILICON VALLEY
-              </span>
+            <div className="mt-4 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.4912655644394!2d77.49916207549944!3d28.676314675637805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1bb41c50fdf%3A0xe6732cb9ca50e0bc!2sABES%20Engineering%20College!5e0!3m2!1sen!2sin!4v1707565914000!5m2!1sen!2sin"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Event venue location map"
+                className="rounded-2xl"
+              />
             </div>
-            <p className="mt-4 text-xs text-gray-400">
-              Final venue details shared with confirmed guests. Expect a central
-              Silicon Valley location with easy access and late-night hours.
+            <p className="mt-4 text-sm font-semibold text-white">
+              ABES Engineering College
+            </p>
+            <p className="mt-1 text-sm text-gray-400">
+              19th KM Stone, NH-09<br />
+              Ghaziabad (UP)
             </p>
           </div>
         </aside>
